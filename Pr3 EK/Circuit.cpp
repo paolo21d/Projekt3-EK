@@ -19,3 +19,15 @@ Circuit::Circuit() {
 
 Circuit::~Circuit() {
 }
+
+bool Circuit::simulate() {
+	return false;
+}
+
+bool Circuit::loadCircuit() {
+	fstream file;
+	file.open("Circuit.txt", ios::in);
+	if (!file.good()) {
+		throw bad_open_file();
+	}
+}

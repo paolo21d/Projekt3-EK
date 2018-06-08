@@ -1,6 +1,4 @@
 #include "Or.h"
-#include <iostream>
-#include <vector>
 using namespace std;
 
 Or::Or(int id_, int in1_, int in2_) {

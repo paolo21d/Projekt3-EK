@@ -4,8 +4,9 @@
 #include "Gate.h"
 #include "Vcc.h"
 #include "Gnd.h"
+#include "MyExceptions.h"
 #include <iostream>
-#include <vector>
+#include <fstream>
 
 class Circuit {
 	std::vector <Gate*> gatesVector;

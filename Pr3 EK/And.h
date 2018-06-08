@@ -3,7 +3,6 @@
 #define AND_H
 
 #include "Gate.h"
-#include <vector>
 class And :	public Gate {
 
 public:

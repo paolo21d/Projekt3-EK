@@ -4,7 +4,6 @@
 
 
 #include "Gate.h"
-#include <vector>
 class Or :	public Gate {
 
 public:

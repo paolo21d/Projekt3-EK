@@ -3,7 +3,6 @@
 #define NOR_H
 
 #include "Gate.h"
-#include <vector>
 
 class Nor :public Gate {
 public:
