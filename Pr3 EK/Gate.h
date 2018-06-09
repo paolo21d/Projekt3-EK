@@ -17,7 +17,7 @@ public:
 		return out;
 	}
 	virtual bool calOut()=0;
-	virtual bool setInputsPointers(std::vector<Gate*>& gatesVector, Gate* vcc, Gate* gnd) {
+	virtual bool setInputsPointers(std::vector<Gate*>& gatesVector,  Gate* vcc,  Gate* gnd) {
 		bool set1 = false, set2 = false;
 		if (in1id == -1) { //gnd
 			input1 = gnd;
@@ -52,6 +52,18 @@ public:
 				return true;
 		}
 		return false;
+	}
+	/*std::ostream & operator<<(const std::ostream& os) {
+		return  os << this->id << " " << this->in1id << " " << this->input2 << std::endl;
+	}*/
+	int getIn1()const {
+		return in1id;
+	}
+	int getIn2()const {
+		return in2id;
+	}
+	int getId()const {
+		return id;
 	}
 };
 #endif // !GATE_H
