@@ -1,5 +1,5 @@
 #include "Circuit.h"
-
+#include "MyExceptions.h"
 
 #include <iostream>
 #include <string>
@@ -9,14 +9,20 @@ int main() {
 	Circuit cir;
 	try {
 		cir.loadCircuit();
-	} catch (const char* cont) {
+	} catch(const bad_load_from_file & bl){
+		cout << bl.what() << endl;
+		return -1;
+	} catch (const bad_open_file& bof) {
+		cout << bof.what() << endl;
+		return -1;
+	}	catch (const char* cont) {
 		cout << cont << endl;
 		return -1;
-	} catch (string cont) {
+	} catch (const string cont) {
 		cout << cont << endl;
 		return -1;
 	}
-	cir.showCircuit();
+	//cir.showCircuit();
 	for (unsigned i = 0; i < 10; i++) {
 		cir.simulate();
 		cout << "Symulacja " << i + 1 << endl;

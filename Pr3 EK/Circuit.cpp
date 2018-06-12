@@ -207,3 +207,12 @@ bool Circuit::getGateOut(int id) const {
 		return 0;
 	return gatesVector[id]->getOut();
 }
+
+std::ostream & operator<<(std::ostream & os, const Circuit & cir) {
+	// TODO: tu wstawiæ instrukcjê return
+	for (unsigned i = 0; i < cir.gatesVector.size(); ++i) {
+		Gate * gate = cir.gatesVector[i];
+		os << i << " " << gate->getId() << " " << gate->getIn1() << " " << gate->getIn2() << endl;
+	}
+	return os;
+}

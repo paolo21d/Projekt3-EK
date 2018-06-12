@@ -1,4 +1,4 @@
-id0 AND 1 0
+id0 NOT id3
 id1 NOT id0
 id2 NOT id1
-id3 AND id1 id2
+id3 AND id2 1

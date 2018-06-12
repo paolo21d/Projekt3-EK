@@ -30,6 +30,7 @@ public:
 	unsigned getSizeCircuit() const;
 	bool getCircuitOut() const;
 	void showCircuit() const;
+	friend std::ostream & operator<<(std::ostream& os, const Circuit& cir);
 };
 
 #endif // !CIRCUIT_H
