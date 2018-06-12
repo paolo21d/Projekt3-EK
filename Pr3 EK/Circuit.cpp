@@ -180,9 +180,13 @@ bool Circuit::loadCircuit() {
 		}
 	}//wczytywanie z pliku
 	for (unsigned i = 0; i < gatesVector.size(); ++i) {
-		gatesVector[i]->setInputsPointers(gatesVector, vcc, gnd);
+		bool b = gatesVector[i]->setInputsPointers(gatesVector, vcc, gnd);
+		if (b == false) {
+			throw bad_load_from_file("Bledne numery id podane jako argumenty!");
+		}
 	}
 	circuitOut = last;
+	file.close();
 	return 1;
 }
 
